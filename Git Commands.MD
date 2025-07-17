@@ -10,22 +10,22 @@
 
 ## git reset:
 -------------
-        Git reset is used when I need to undo commits or adjust the commit history. It allows you to move the HEAD pointer and either modify the staging area or the working directory depending on the reset type (soft, mixed, or hard). 
-        For example, if I accidentally committed the wrong changes, I can use git reset --soft HEAD~1 to uncommit the changes but keep them staged, or git reset --hard HEAD~1 to completely discard them.
+    Git reset is used when I need to undo commits or adjust the commit history. It allows you to move the HEAD pointer and either modify the staging area or the working directory depending on the reset type (soft, mixed, or hard). 
+    For example, if I accidentally committed the wrong changes, I can use git reset --soft HEAD~1 to uncommit the changes but keep them staged, or git reset --hard HEAD~1 to completely discard them.
             
-    1. git reset --soft <commit>
-        Moves HEAD to <commit>, keeps staged and working directory intact. Your changes stay in the staging area and removed from commit area. 
-            git reset --soft HEAD~1
+        1. git reset --soft <commit>
+            Moves HEAD to <commit>, keeps staged and working directory intact. Your changes stay in the staging area and removed from commit area. 
+                git reset --soft HEAD~1
 
-    2. git reset --mixed <commit> (default)
-        Moves HEAD and unstages files. Changes stay in your working directory. it will remove the changes from staging area, commit area and keep the code in workspace.
-        git reset HEAD~1
+        2. git reset --mixed <commit> (default)
+            Moves HEAD and unstages files. Changes stay in your working directory. it will remove the changes from staging area, commit area and keep the code in workspace.
+            git reset HEAD~1
 
-    3. git reset --hard <commit>
-        Moves HEAD and wipes out all changes. changes will be removed from commit, staging and workspace. DANGEROUS — deletes commit history and local changes!
-            git reset --hard HEAD~1
+        3. git reset --hard <commit>
+            Moves HEAD and wipes out all changes. changes will be removed from commit, staging and workspace. DANGEROUS — deletes commit history and local changes!
+                git reset --hard HEAD~1
 
-    ⚠️ Use reset only on local/private branches — never on shared or public branches, as it rewrites history.
+        ⚠️ Use reset only on local/private branches — never on shared or public branches, as it rewrites history.
 
 ## git revert:
 -------------
@@ -33,15 +33,15 @@
         git revert <commit>
     Safe for shared branches. Used when you want to undo a commit but keep the commit history intact. Helpful in production environments where history integrity is critical
 
-    🧠 Example Use Cases
-        Use **reset** if:
-            You're working alone and want to remove or redo local commits
-            You made a mistake and want to "go back in time"
-        Use **revert** if:
-            You're working on a shared branch (like main)
+        🧠 Example Use Cases
+            Use **reset** if:
+                You're working alone and want to remove or redo local commits
+                You made a mistake and want to "go back in time"
+            Use **revert** if:
+                You're working on a shared branch (like main)
             You need to undo a bad commit without affecting others' history
 
-## Restore  
+## git restore  
 
         Restore works on particular file, reset or revert works on entire workspace..
         If you've made changes to a file and want to revert it to its last committed state, you can use git restore. 
