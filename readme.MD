@@ -68,3 +68,7 @@
             However, because rebase rewrites commit history, it should only be used on local or private branches — never on shared branches that others are working on. Rebasing shared branches can cause confusion and conflicts for your teammates.
 
             Rebase is a powerful tool when used carefully. It’s ideal for polishing your branch's history before merging, making the project history easier to maintain and understand in the long term.        
+
+## Merge Conflict
+
+    A merge conflict occurs when Git is unable to automatically merge two branches because they contain conflicting changes in the same part of a file. This usually happens when multiple team members modify the same lines of code or structure files differently in separate branches. When you attempt to merge, Git pauses the process and highlights the conflicting files. These files will contain special conflict markers (<<<<<<<, =======, and >>>>>>>) showing the differences between the two versions. As a developer, you must manually open each conflicted file, decide which version to keep (or combine both), and edit the file accordingly. Once the conflicts are resolved, you stage the changes using git add and complete the merge with a git commit. Merge conflicts are a normal part of collaborative development, and resolving them carefully ensures that no work is lost and the project remains stable. Regularly syncing your branch with the main branch and coordinating with your team can help minimize the frequency of conflicts.
