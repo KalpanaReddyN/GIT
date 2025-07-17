@@ -48,4 +48,6 @@
     When you run git log in a Git repository, it displays a history of all commits made in the current branch by default.
     
 
-
+## Two different ways to integrate changes from one branch into another
+    merge
+    rebase 
