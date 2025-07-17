@@ -1,12 +1,12 @@
 ## Git Has 3 Main Areas:
     Working Directory
-    Where you edit files (e.g., in VS Code).
+        Where you edit files (e.g., in VS Code).
 
     Staging Area (Index)
-    Where you prepare files to be committed using git add.
+        Where you prepare files to be committed using git add.
 
     Commit Area (Repository History)
-    Where Git stores your committed snapshots after git commit.
+        Where Git stores your committed snapshots after git commit.
 
 ## git reset:
 -------------
