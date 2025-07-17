@@ -36,5 +36,16 @@
             ○ Merge Branches: Combine changes from one branch into another.
             ○ Delete Branches: Clean up branches that are no longer needed.
     
+## SHA Code
+    
+    SHA stands for Secure Hash Algorithm, and in Git, it refers to the unique identifier (a commit hash) that Git assigns to every commit you make.
+    EX: 40-character string looks like ---> 6e559cb8c1a3e909d2a9b19360cf8324b0f7a46c
+
+    • Each commit is assigned a unique SHA code. This ensures that no two commits in the same repository can have the same identifier, even if the changes are identical.
+    • SHA codes are used to reference specific commits in the repository's history. This is useful for viewing changes (git show <SHA>), reverting to an earlier state, or merging changes
+    • It ensures the security and accuracy of the version control system.
+
+    When you run git log in a Git repository, it displays a history of all commits made in the current branch by default.
+    
 
 
