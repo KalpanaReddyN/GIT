@@ -72,3 +72,86 @@
 ## Merge Conflict
 
     A merge conflict occurs when Git is unable to automatically merge two branches because they contain conflicting changes in the same part of a file. This usually happens when multiple team members modify the same lines of code or structure files differently in separate branches. When you attempt to merge, Git pauses the process and highlights the conflicting files. These files will contain special conflict markers (<<<<<<<, =======, and >>>>>>>) showing the differences between the two versions. As a developer, you must manually open each conflicted file, decide which version to keep (or combine both), and edit the file accordingly. Once the conflicts are resolved, you stage the changes using git add and complete the merge with a git commit. Merge conflicts are a normal part of collaborative development, and resolving them carefully ensures that no work is lost and the project remains stable. Regularly syncing your branch with the main branch and coordinating with your team can help minimize the frequency of conflicts.
+
+## Branching Strategies
+    1) Git Flow
+        Git Flow is a Git branching model that organizes work around well-defined branch types to support structured development, releases, and hotfixes. It helps teams manage features, track production-ready code, and handle emergency fixes in a clean, collaborative way.
+        
+        Core Branches in Git Flow:
+            main (or master):
+                This branch holds production-ready code. All releases are tagged and deployed from here.
+            develop:
+                Contains the latest in-progress code that will go into the next release. New features are merged into this branch.
+        
+        Supporting Branches
+            Feature Branches (feature/xyz):
+                Created from: develop
+                Used for: Adding new features
+                Merged back into: develop
+                Example: feature/user-authentication
+
+            Release Branches (release/x.y.z):
+                Created from: develop
+                Used for: Final testing, bug fixing, preparing a release
+                Merged into: both main and develop
+                Example: release/1.0.0
+
+            Hotfix Branches (hotfix/bug-id):
+                Created from: main
+                Used for: Critical fixes in production
+                Merged into: both main and develop
+                Example: hotfix/login-crash
+        
+        Git Flow Lifecycle (Typical Process):
+            Start with a stable main and a working develop branch.
+            Developers create feature branches from develop and work independently.
+            Once features are complete, they are merged into develop.
+            When it's time for a release, a release branch is created from develop. Final QA, minor fixes, and prep (like version bumps) happen here.
+            The release branch is then merged into main (for deployment) and also back into develop (to keep develop updated).
+            If an urgent bug occurs in production, a hotfix branch is created from main, patched, and merged back into both main and develop.
+        
+        Benefits of Git Flow
+            Clear separation of production, development, and features
+            Easy to manage hotfixes and urgent patches
+            Ideal for teams with defined release cycles
+            Promotes parallel development without interfering with stable code
+
+    2) Feature Branching Model
+        The Feature Branching Model is a Git workflow where every new feature, bugfix, or task is developed in a dedicated branch, separate from the main production code. This model helps keep development organized, isolated, and collaborative — without affecting the stable code in the main branch.
+
+        Key Concepts:
+            main or master Branch:
+                Contains production-ready, stable code.Never develop directly on main.
+
+            Feature Branches (feature/xyz)
+                Created from: main (or sometimes develop in Git Flow setups)
+                Used for: Working on individual features or tasks
+                Merged back into: main via a Pull Request (PR)
+
+            Naming examples:
+            feature/login-page
+            feature/add-user-role
+            bugfix/reset-password
+            hotfix/crash-on-startup
+        
+        Typical Workflow:
+            ✅ Start on main:
+                    git checkout main
+                    git pull origin main
+            🌿 Create a new branch:
+                    git checkout -b feature/user-registration
+            💻 Make your changes and commit:
+                    git add .
+                    git commit -m "Add user registration form"
+            🚀 Push your feature branch:
+                    git push origin feature/user-registration
+            🔁 Create a Pull Request (PR) on GitHub/GitLab/Bitbucket
+                    Review happens here. Once approved, merge to main
+            🧹 Optionally delete the feature branch after merging:
+                    git branch -d feature/user-registration
+
+        Advantages of Feature Branching:
+            Isolation: Developers work independently without affecting others
+            Safe collaboration: Changes aren’t merged until reviewed and approved
+            Clean history: Easy to trace features or bugs through branch names and commits
+            Better CI/CD: Code can be automatically tested in feature branches before merging
