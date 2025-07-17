@@ -160,7 +160,7 @@
 
         Advantages of Feature Branching:
         --------------------------------
-            Isolation: Developers work independently without affecting others
-            Safe collaboration: Changes aren’t merged until reviewed and approved
-            Clean history: Easy to trace features or bugs through branch names and commits
-            Better CI/CD: Code can be automatically tested in feature branches before merging
+            Developers work independently without affecting others.
+            Changes aren’t merged until reviewed and approved.
+            Easy to trace features or bugs through branch names and commits.
+            Code can be automatically tested in feature branches before merging.
