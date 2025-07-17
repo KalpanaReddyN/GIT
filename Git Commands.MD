@@ -77,3 +77,127 @@
         • Git cherry-pick is a command used when I want to selectively apply specific commits from one branch to another without merging the entire branch. For example, if a bug fix was made in a feature branch and I want that fix in main, I can cherry-pick just that commit, which applies the changes to main. The commit will be added as a new commit to the branch I’m working on, which keeps the history clean without merging other unrelated changes.
         • It's particularly useful for applying hotfixes, backporting changes, or when I want to grab specific commits from a branch, like when working on a production branch and needing just one change from a feature branch.
 
+Basic Commands
+-----------------
+
+    1. git init:
+        ○ Initializes a new Git repository in the current directory.
+        ○ Example: git init
+    
+    2. git clone <repository-url>:
+        ○ Creates a copy of an existing repository from a remote URL.
+        ○ Example:git clonehttps://github.com/user/repo.git
+
+    3. git status:
+        ○ Displays the status of changes in the working directory and staging area.
+        ○ Example: git status
+
+    4. git add <file>:
+        ○ Stages changes (adds files to the staging area) for the next commit.
+        ○ Example: git add file.txt
+                   git add .
+
+    5. git commit -m "message":
+        ○ Commits staged changes to the repository with a descriptive message.
+        ○ Example: git commit -m "Initial commit"
+
+
+Branching and Merging:
+---------------------
+
+    1. git branch:
+        ○ Lists all branches in the repository or creates a new branch.
+        ○ Example: git branch
+                   git branch new-feature
+
+    2. git checkout <branch>:
+        ○ Switches to a specific branch.
+        ○ Example: git checkout main
+
+    3. git checkout -b <new-branch>:
+        ○ Creates a new branch and switches to it.
+        ○ Example: git checkout -b feature-branch
+
+    4. git merge <branch>:
+        ○ Merges changes from a specified branch into the current branch.
+        ○ Example: git merge feature-branch
+
+    5. git rebase <branch>:
+        ○ Reapplies commits on top of another branch for a cleaner commit history.
+        ○ Example: git rebase main
+
+
+Remote Repositories:
+-------------------
+
+    1. git remote add <name> <url>:
+        ○ Adds a remote repository reference.
+        ○ Example: git remote add origin https://github.com/user/repo.git
+
+    2. git pull <remote> <branch>:
+        ○ Fetches and integrates changes from a remote repository.
+        ○ Example: git pull origin main
+
+    3. git push <remote> <branch>:
+        ○ Pushes changes from your local branch to the remote repository.
+        ○ Example: git push origin main
+
+    4. git fetch <remote>:
+        ○ Downloads changes from a remote repository but does not merge them.
+        ○ Example: git fetch origin
+
+Undoing Changes:
+---------------
+
+    1. git reset:
+        ○ Undoes changes in the staging area or a commit.
+        ○ Example: git reset HEAD file.txt
+        
+    2. git revert <commit>:
+        ○ Creates a new commit that undoes changes from a previous commit.
+        ○ Example: git revert a1b2c3d4
+        
+    3. git stash:
+        ○ Temporarily saves changes in your working directory without committing.
+        ○ Example: git stash
+        
+    4. git stash pop:
+        ○ Applies stashed changes back to the working directory.
+        ○ Example: git stash pop
+
+Viewing History and Logs:
+-------------------------
+
+    1. git log:
+        ○ Displays the commit history of the repository.
+        ○ Example: git log
+        
+    2. git diff:
+        ○ Shows changes between commits, the working directory, and staging area.
+        ○ Example: git diff
+        
+    3. git show <commit>:
+        ○ Shows details of a specific commit.
+        ○ Example: git show a1b2c3d4
+
+Other Useful Commands:
+----------------------
+
+    1. git config:
+        ○ Configures Git settings, such as username and email.
+        ○ Example: git config --global user.name "Your Name" git config --global user.email "your.email@example.com"
+        
+    2. git tag <tag-name>:
+        ○ Creates a tag for a specific commit.
+        ○ Example: git tag v1.0
+        
+    3. git rm <file>:
+        ○ Removes a file from the repository and staging area.
+        ○ Example: git rmfile.txt
+        
+    4. git blame <file>:
+        ○ Shows which commit and author last modified each line of a file.
+        ○ Example: git blame file.txt
+
+
+
