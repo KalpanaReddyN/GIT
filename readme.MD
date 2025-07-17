@@ -45,7 +45,7 @@
     • SHA codes are used to reference specific commits in the repository's history. This is useful for viewing changes (git show <SHA>), reverting to an earlier state, or merging changes
     • It ensures the security and accuracy of the version control system.
 
-    When you run `git log` in a Git repository, it displays a history of all commits made in the current branch by default.
+    When you run git log in a Git repository, it displays a history of all commits made in the current branch by default.
     
 
 
