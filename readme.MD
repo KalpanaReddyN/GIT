@@ -74,7 +74,7 @@
     A merge conflict occurs when Git is unable to automatically merge two branches because they contain conflicting changes in the same part of a file. This usually happens when multiple team members modify the same lines of code or structure files differently in separate branches. When you attempt to merge, Git pauses the process and highlights the conflicting files. These files will contain special conflict markers (<<<<<<<, =======, and >>>>>>>) showing the differences between the two versions. As a developer, you must manually open each conflicted file, decide which version to keep (or combine both), and edit the file accordingly. Once the conflicts are resolved, you stage the changes using git add and complete the merge with a git commit. Merge conflicts are a normal part of collaborative development, and resolving them carefully ensures that no work is lost and the project remains stable. Regularly syncing your branch with the main branch and coordinating with your team can help minimize the frequency of conflicts.
 
 ## Branching Strategies
-    1) Git Flow
+##  1) Git Flow
        -------------
         Git Flow is a Git branching model that organizes work around well-defined branch types to support structured development, releases, and hotfixes. It helps teams manage features, track production-ready code, and handle emergency fixes in a clean, collaborative way.
         
@@ -121,7 +121,7 @@
             Ideal for teams with defined release cycles
             Promotes parallel development without interfering with stable code
 
-    2) Feature Branching Model
+##  2) Feature Branching Model
        -----------------------
         The Feature Branching Model is a Git workflow where every new feature, bugfix, or task is developed in a dedicated branch, separate from the main production code. This model helps keep development organized, isolated, and collaborative — without affecting the stable code in the main branch.
 
