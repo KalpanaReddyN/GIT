@@ -75,7 +75,6 @@
 
 ## Branching Strategies
 ##  1) Git Flow
-       -------------
         Git Flow is a Git branching model that organizes work around well-defined branch types to support structured development, releases, and hotfixes. It helps teams manage features, track production-ready code, and handle emergency fixes in a clean, collaborative way.
         
         Core Branches in Git Flow:
@@ -122,7 +121,6 @@
             Promotes parallel development without interfering with stable code
 
 ##  2) Feature Branching Model
-       -----------------------
         The Feature Branching Model is a Git workflow where every new feature, bugfix, or task is developed in a dedicated branch, separate from the main production code. This model helps keep development organized, isolated, and collaborative — without affecting the stable code in the main branch.
 
         Key Concepts:
