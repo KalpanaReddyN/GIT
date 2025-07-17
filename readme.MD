@@ -49,5 +49,22 @@
     
 
 ## Two different ways to integrate changes from one branch into another
-    merge
-    rebase 
+    1)  merge
+            A merge commit has two parent commits — it’s created when one branch is merged into another. Merging preserves the complete commit history, which means at any point, you can track all changes, who made them, and how branches evolved. Git does not rewrite past commits, making this approach transparent and safe for collaborative workflows.
+
+            When a pull request (PR) is approved, someone (usually the author or a maintainer) clicks "Merge", and Git creates a new merge commit with a unique ID. This commit represents the point where two branches were combined.
+
+            Merge commits are very useful for debugging, as they clearly show when and what features or fixes were integrated. If something breaks after a merge, it's easier to trace the problem by checking the merge commit.
+
+            Merging also allows teams to work independently on different branches and later integrate their changes into the main branch without losing context or overwriting each other's work. It supports a safe, organized workflow in collaborative environments.
+            
+    2) rebase 
+            Rebase is a Git operation that moves or reapplies your branch's commits onto another base branch — typically to make the commit history linear and clean. Instead of preserving the branching structure like merge, rebase rewrites history by creating new commits that appear as if they were created on top of the target branch all along.
+
+            When you run git rebase main on a feature branch, Git temporarily removes your feature branch's commits, applies the latest commits from main, and then re-applies your work on top — as new commits. This makes the project history appear as if everyone worked in a straight line, which can be easier to read and review.
+
+            Rebase is especially helpful for keeping a clean, readable commit history, free from unnecessary merge commits. It’s commonly used before opening a pull request, to ensure that your branch is up-to-date with the latest changes in main.
+
+            However, because rebase rewrites commit history, it should only be used on local or private branches — never on shared branches that others are working on. Rebasing shared branches can cause confusion and conflicts for your teammates.
+
+            Rebase is a powerful tool when used carefully. It’s ideal for polishing your branch's history before merging, making the project history easier to maintain and understand in the long term.        
