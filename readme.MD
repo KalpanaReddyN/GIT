@@ -12,7 +12,12 @@
 
 ## How to get the already existing git repo to my vscode
 
-
+    1) git clone <repository-url>
+    2) cd repository
+    3) git pull origin main
+    4) The new repo will be seen in our vs code and make changes and push the code to github using below commands
+    5) git add . ; git commit -m "message" ; git push origin main
+    
 
 
 
