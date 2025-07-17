@@ -75,15 +75,18 @@
 
 ## Branching Strategies
     1) Git Flow
+       -------------
         Git Flow is a Git branching model that organizes work around well-defined branch types to support structured development, releases, and hotfixes. It helps teams manage features, track production-ready code, and handle emergency fixes in a clean, collaborative way.
         
         Core Branches in Git Flow:
+        --------------------------
             main (or master):
                 This branch holds production-ready code. All releases are tagged and deployed from here.
             develop:
                 Contains the latest in-progress code that will go into the next release. New features are merged into this branch.
         
-        Supporting Branches
+        Supporting Branches:
+        --------------------
             Feature Branches (feature/xyz):
                 Created from: develop
                 Used for: Adding new features
@@ -103,6 +106,7 @@
                 Example: hotfix/login-crash
         
         Git Flow Lifecycle (Typical Process):
+        -------------------------------------
             Start with a stable main and a working develop branch.
             Developers create feature branches from develop and work independently.
             Once features are complete, they are merged into develop.
@@ -110,16 +114,19 @@
             The release branch is then merged into main (for deployment) and also back into develop (to keep develop updated).
             If an urgent bug occurs in production, a hotfix branch is created from main, patched, and merged back into both main and develop.
         
-        Benefits of Git Flow
+        Benefits of Git Flow:
+        ---------------------
             Clear separation of production, development, and features
             Easy to manage hotfixes and urgent patches
             Ideal for teams with defined release cycles
             Promotes parallel development without interfering with stable code
 
     2) Feature Branching Model
+       -----------------------
         The Feature Branching Model is a Git workflow where every new feature, bugfix, or task is developed in a dedicated branch, separate from the main production code. This model helps keep development organized, isolated, and collaborative — without affecting the stable code in the main branch.
 
         Key Concepts:
+        -------------
             main or master Branch:
                 Contains production-ready, stable code.Never develop directly on main.
 
@@ -135,6 +142,7 @@
             hotfix/crash-on-startup
         
         Typical Workflow:
+        -----------------
             ✅ Start on main:
                     git checkout main
                     git pull origin main
@@ -151,6 +159,7 @@
                     git branch -d feature/user-registration
 
         Advantages of Feature Branching:
+        --------------------------------
             Isolation: Developers work independently without affecting others
             Safe collaboration: Changes aren’t merged until reviewed and approved
             Clean history: Easy to trace features or bugs through branch names and commits
