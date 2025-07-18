@@ -67,7 +67,7 @@
 
             However, because rebase rewrites commit history, it should only be used on local or private branches — never on shared branches that others are working on. Rebasing shared branches can cause confusion and conflicts for your teammates.
 
-            Rebase is a powerful tool when used carefully. It’s ideal for polishing your branch's history before merging, making the project history easier to maintain and understand in the long term.        
+            Rebase is a powerful tool when used careeasier to maintain and understand in the long term.fully. It’s ideal for polishing your branch's history before merging, making the project history         
 
 ## Merge Conflict
 
@@ -126,7 +126,7 @@
         Key Concepts:
         -------------
             main or master Branch:
-                Contains production-ready, stable code.Never develop directly on main.
+                Contains production-ready, stable code. Never develop directly on main.
 
             Feature Branches (feature/xyz)
                 Created from: main (or sometimes develop in Git Flow setups)

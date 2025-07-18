@@ -2,10 +2,10 @@
     Working Directory
         Where you edit files (e.g., in VS Code).
 
-    Staging Area (Index)
+    Staging Area (Index) --> (Temporary holding space before committing)
         Where you prepare files to be committed using git add.
 
-    Commit Area (Repository History)
+    Commit Area (Repository History) --> (This saves your staged changes to the local Git repository (not remote!))
         Where Git stores your committed snapshots after git commit.
 
 ## git reset:
