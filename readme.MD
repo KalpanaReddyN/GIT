@@ -2,7 +2,7 @@
 
     1) Open the folder path in vs code and type git init on terminal.
     2) . git folder will be created
-    3) Create a folder in git with same name as the folder in vs code.
+    3) Create a folder in github with same name as the folder in vs code.
     4) git remote add origin <link>    ## this comes from the above created git repo on the bottom right side.
     5) git branch -M main     ## Now the branch is converted to main
     6) git add .

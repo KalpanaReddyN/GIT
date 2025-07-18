@@ -39,7 +39,7 @@
                 You made a mistake and want to "go back in time"
             Use **revert** if:
                 You're working on a shared branch (like main)
-            You need to undo a bad commit without affecting others' history
+                You need to undo a bad commit without affecting others' history
 
 ## git restore  
 
